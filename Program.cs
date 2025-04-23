@@ -10,13 +10,17 @@ class Program
         var reader = new ReadInput("Input/input.txt");
         var regexInput = new RegexInput();
         var occurrences = new OccurrenesInput();
+        var sorter = new SortInput();
 
         string inputContent = reader.Read();
         List<string> wordsList = regexInput.Parse(inputContent);
         Dictionary<string, int> InputOccurences = occurrences.InputCounter(wordsList);
+        List<KeyValuePair<string, int>> SortedInput = sorter.Sort(InputOccurences);
 
         Console.WriteLine("Number of words: ");
-        foreach (KeyValuePair<string, int> kvp in InputOccurences) {
+        Console.WriteLine("\r");
+
+        foreach (KeyValuePair<string, int> kvp in SortedInput) {
             Console.WriteLine("{0} {1} ", kvp.Key, kvp.Value);
         }
     }
