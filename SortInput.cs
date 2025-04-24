@@ -7,8 +7,11 @@ public class SortInput {
 
         return sortedList;
     }
-
-    // Shamefully stolen from Interview Point
+ 
+    /* Shamefully stolen from Interview Point
+    // Compares every word in the list by checking if it's neighbour is higher on the list alphabetically
+    // If higher then the order of the words is moved untill it becomes completely alphabetical
+    */
     private List<KeyValuePair<string, int>> SortRoutine(List<KeyValuePair<string, int>> list) {
         
         var unsortedList = list;

@@ -23,5 +23,9 @@ class Program
         foreach (KeyValuePair<string, int> kvp in SortedInput) {
             Console.WriteLine("{0} {1} ", kvp.Key, kvp.Value);
         }
+
+        Console.WriteLine("\nPress any key to exit...");
+        Console.ReadKey();
+
     }
 }
