@@ -20,7 +20,8 @@ class Program
 
         Console.WriteLine($"Number of words: {count.CountWords(SortedInput)}\n");
 
-        foreach (KeyValuePair<string, int> kvp in SortedInput) {
+        foreach (KeyValuePair<string, int> kvp in SortedInput)
+        {
             Console.WriteLine("{0} {1} ", kvp.Key, kvp.Value);
         }
 
