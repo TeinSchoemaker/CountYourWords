@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-class RegexInput
+public class RegexInput
 {
 
    // Pattern only looks for uper and lower key letters
@@ -11,7 +11,7 @@ class RegexInput
    {
       Regex rg = new Regex(pattern);
       var matching = rg.Matches(input);
-      List<string> wordsList = [];
+      List<string> wordsList = new List<string>();
 
       foreach (Match match in matching)
       {
